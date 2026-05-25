@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bnr18j5onocrt"]
+
+[ext_resource type="Script" uid="uid://h5l4t1e2mi8b" path="res://Scripts/title.gd" id="1_w31pl"]
+
+[node name="Title" type="Control" unique_id=1439430856]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w31pl")
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1018339417]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.5
+offset_right = 55.5
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="TitleLabel" type="Label" parent="Layout" unique_id=644594888]
+layout_mode = 2
+text = "Chronic Clicker!"
+
+[node name="PlayButton" type="Button" parent="Layout" unique_id=533803291]
+layout_mode = 2
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="Layout" unique_id=381586290]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Layout/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Layout/QuitButton" to="." method="_on_quit_button_pressed"]
