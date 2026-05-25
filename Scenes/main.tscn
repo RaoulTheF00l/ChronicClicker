@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://becirpees08vt"]
 
-[ext_resource type="Texture2D" uid="uid://bwkxkde1sdhgw" path="res://man.png" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://ckufiyy10xxl1" path="res://Scripts/main.gd" id="1_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://bwkxkde1sdhgw" path="res://Assets/man.png" id="1_jjgbg"]
 
 [node name="Main" type="Control" unique_id=1046776010]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bo1nx")
 
 [node name="Panel" type="Panel" parent="." unique_id=240101541]
 layout_mode = 1
@@ -20,10 +22,10 @@ grow_vertical = 2
 
 [node name="StaticImg" type="BoxContainer" parent="." unique_id=2118950851]
 layout_mode = 0
-offset_left = 214.0
-offset_top = 87.0
-offset_right = 342.0
-offset_bottom = 215.0
+offset_left = 211.0
+offset_top = 159.0
+offset_right = 339.0
+offset_bottom = 287.0
 
 [node name="DudeTextureRect" type="TextureRect" parent="StaticImg" unique_id=753728243]
 layout_mode = 2
@@ -31,10 +33,10 @@ texture = ExtResource("1_jjgbg")
 
 [node name="Layout" type="VBoxContainer" parent="." unique_id=258240324]
 layout_mode = 0
-offset_left = 107.0
-offset_top = 7.0
-offset_right = 245.0
-offset_bottom = 124.0
+offset_left = 104.0
+offset_top = 125.0
+offset_right = 242.0
+offset_bottom = 242.0
 theme_override_constants/separation = 10
 
 [node name="TitleLabel" type="Label" parent="Layout" unique_id=1192291742]
@@ -43,7 +45,7 @@ text = " Placeholder Kush"
 
 [node name="WeightLabel" type="Label" parent="Layout" unique_id=905956635]
 layout_mode = 2
-text = "10"
+text = "0.0"
 horizontal_alignment = 1
 
 [node name="WeightUnitLabel" type="Label" parent="Layout" unique_id=59864206]
@@ -51,17 +53,36 @@ layout_mode = 2
 text = "Grams"
 horizontal_alignment = 1
 
-[node name="HarvestButton" type="Button" parent="." unique_id=559532319]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 189.0
-offset_right = 250.0
-offset_bottom = 220.0
-text = "HARVEST"
-
 [node name="NugPanel" type="Panel" parent="." unique_id=1384345404]
 layout_mode = 0
-offset_left = 157.0
-offset_top = 115.0
-offset_right = 197.0
-offset_bottom = 155.0
+offset_left = 154.0
+offset_top = 233.0
+offset_right = 194.0
+offset_bottom = 273.0
+
+[node name="ButtonsLayout" type="VBoxContainer" parent="." unique_id=1376284218]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 278.0
+offset_right = 214.0
+offset_bottom = 355.0
+theme_override_constants/separation = 15
+
+[node name="HarvestButton" type="Button" parent="ButtonsLayout" unique_id=559532319]
+layout_mode = 2
+text = "HARVEST"
+
+[node name="SellButton" type="Button" parent="ButtonsLayout" unique_id=560578044]
+layout_mode = 2
+text = "SELL 10"
+
+[node name="CurrencyLayout" type="BoxContainer" parent="." unique_id=1260676179]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 1.0
+offset_right = 201.0
+offset_bottom = 41.0
+
+[node name="MoneyLabel" type="Label" parent="CurrencyLayout" unique_id=761253813]
+layout_mode = 2
+text = "Cash: $0"
