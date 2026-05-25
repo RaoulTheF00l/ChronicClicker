@@ -15,6 +15,17 @@ run/main_scene="uid://bnr18j5onocrt"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+
+[gui]
+
+theme/custom_font="uid://bcq5q3228st1h"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

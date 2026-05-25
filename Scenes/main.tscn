@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ckufiyy10xxl1" path="res://Scripts/main.gd" id="1_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://bwkxkde1sdhgw" path="res://Assets/man.png" id="1_jjgbg"]
+[ext_resource type="FontFile" uid="uid://blyeb4palnu5" path="res://Assets/Silkscreen-Bold.ttf" id="3_8gbba"]
+[ext_resource type="Texture2D" uid="uid://b7avmnnxurb36" path="res://icon.svg" id="4_jjvhh"]
 
 [node name="Main" type="Control" unique_id=1046776010]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,89 +15,107 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bo1nx")
 
-[node name="Panel" type="Panel" parent="." unique_id=240101541]
+[node name="MobileLayout" type="VBoxContainer" parent="." unique_id=1480444554]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -386.0
+offset_top = -711.0
+offset_right = -62.0
+offset_bottom = -116.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2.3, 2.3)
+theme_override_constants/separation = 30
 
-[node name="StaticImg" type="BoxContainer" parent="." unique_id=2118950851]
-layout_mode = 0
-offset_left = 211.0
-offset_top = 159.0
-offset_right = 339.0
-offset_bottom = 287.0
+[node name="StaticImg" type="BoxContainer" parent="MobileLayout" unique_id=2118950851]
+texture_filter = 1
+layout_mode = 2
+alignment = 1
 
-[node name="DudeTextureRect" type="TextureRect" parent="StaticImg" unique_id=753728243]
+[node name="DudeTextureRect" type="TextureRect" parent="MobileLayout/StaticImg" unique_id=753728243]
 layout_mode = 2
 texture = ExtResource("1_jjgbg")
 
-[node name="Layout" type="VBoxContainer" parent="." unique_id=258240324]
-layout_mode = 0
-offset_left = 104.0
-offset_top = 125.0
-offset_right = 242.0
-offset_bottom = 242.0
+[node name="DialougeLayout" type="HBoxContainer" parent="MobileLayout/StaticImg" unique_id=1622846119]
+layout_mode = 2
+
+[node name="DialougeLabel" type="RichTextLabel" parent="MobileLayout/StaticImg/DialougeLayout" unique_id=412484244]
+layout_mode = 2
+
+[node name="Layout" type="VBoxContainer" parent="MobileLayout" unique_id=258240324]
+layout_mode = 2
 theme_override_constants/separation = 10
+alignment = 1
 
-[node name="TitleLabel" type="Label" parent="Layout" unique_id=1192291742]
+[node name="TitleLabel" type="Label" parent="MobileLayout/Layout" unique_id=1192291742]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8gbba")
+theme_override_font_sizes/font_size = 18
 text = " Placeholder Kush"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="WeightLabel" type="Label" parent="Layout" unique_id=905956635]
+[node name="WeightLabel" type="Label" parent="MobileLayout/Layout" unique_id=905956635]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "0.0"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="WeightUnitLabel" type="Label" parent="Layout" unique_id=59864206]
+[node name="WeightUnitLabel" type="Label" parent="MobileLayout/Layout" unique_id=59864206]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Grams"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="NugPanel" type="Panel" parent="." unique_id=1384345404]
-layout_mode = 0
-offset_left = 154.0
-offset_top = 233.0
-offset_right = 194.0
-offset_bottom = 273.0
+[node name="NugTextureRect" type="TextureRect" parent="MobileLayout/Layout" unique_id=839268730]
+layout_mode = 2
+texture = ExtResource("4_jjvhh")
+stretch_mode = 3
 
-[node name="ButtonsLayout" type="VBoxContainer" parent="." unique_id=1376284218]
-layout_mode = 0
-offset_left = 136.0
-offset_top = 278.0
-offset_right = 214.0
-offset_bottom = 355.0
+[node name="ButtonsLayout" type="VBoxContainer" parent="MobileLayout" unique_id=1376284218]
+layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="HarvestButton" type="Button" parent="ButtonsLayout" unique_id=559532319]
+[node name="HarvestButton" type="Button" parent="MobileLayout/ButtonsLayout" unique_id=559532319]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8gbba")
 text = "HARVEST"
 
-[node name="SellButton" type="Button" parent="ButtonsLayout" unique_id=560578044]
+[node name="SellButton" type="Button" parent="MobileLayout/ButtonsLayout" unique_id=560578044]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8gbba")
 text = "SELL 10"
 
-[node name="CurrencyLayout" type="BoxContainer" parent="." unique_id=1260676179]
-layout_mode = 0
-offset_left = 136.0
-offset_top = 1.0
-offset_right = 201.0
-offset_bottom = 41.0
-
-[node name="MoneyLabel" type="Label" parent="CurrencyLayout" unique_id=761253813]
+[node name="CurrencyLayout" type="BoxContainer" parent="MobileLayout" unique_id=1260676179]
 layout_mode = 2
+alignment = 1
+
+[node name="MoneyLabel" type="Label" parent="MobileLayout/CurrencyLayout" unique_id=761253813]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Cash: $0"
 
-[node name="StoreLayout" type="BoxContainer" parent="." unique_id=710123018]
-layout_mode = 0
-offset_left = 226.0
-offset_top = 306.0
-offset_right = 407.0
-offset_bottom = 346.0
-theme_override_constants/separation = 15
-
-[node name="HireButton" type="Button" parent="StoreLayout" unique_id=1023842269]
+[node name="StoreLayout" type="BoxContainer" parent="MobileLayout" unique_id=710123018]
 layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="HireButton" type="Button" parent="MobileLayout/StoreLayout" unique_id=1023842269]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Hire x1 Worker"
+
+[node name="HireDealerButton" type="Button" parent="MobileLayout/StoreLayout" unique_id=1032069852]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Hire x1 Dealer
+"

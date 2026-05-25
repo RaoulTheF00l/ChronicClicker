@@ -12,11 +12,11 @@ var hire_value: int = 10
 
 
 
-@onready var harvest_button: Button = $ButtonsLayout/HarvestButton
-@onready var weight_unit_label: Label = $Layout/WeightUnitLabel
-@onready var weight_label: Label = $Layout/WeightLabel
-@onready var money_label: Label = $CurrencyLayout/MoneyLabel
-@onready var sell_button: Button = $ButtonsLayout/SellButton
+@onready var harvest_button: Button = $MobileLayout/ButtonsLayout/HarvestButton
+@onready var weight_unit_label: Label = $MobileLayour/Layout/WeightUnitLabel
+@onready var weight_label: Label = $MobileLayout/Layout/WeightLabel
+@onready var money_label: Label = $MobileLayout/CurrencyLayout/MoneyLabel
+@onready var sell_button: Button = $MobileLayout/ButtonsLayout/SellButton
 
 
 
