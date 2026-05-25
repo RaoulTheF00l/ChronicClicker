@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnr18j5onocrt"]
 
-[ext_resource type="Script" uid="uid://h5l4t1e2mi8b" path="res://Scripts/title.gd" id="1_w31pl"]
+[ext_resource type="Script" uid="uid://bkqcm350j7prf" path="res://Scripts/title.gd" id="1_w31pl"]
 
 [node name="Title" type="Control" unique_id=1439430856]
 layout_mode = 3
@@ -25,13 +25,8 @@ grow_horizontal = 2
 layout_mode = 2
 text = "Chronic Clicker!"
 
-[node name="PlayButton" type="Button" parent="Layout" unique_id=533803291]
+[node name="PlayButton" type="Button" parent="Layout" unique_id=71675300]
 layout_mode = 2
-text = "Play"
-
-[node name="QuitButton" type="Button" parent="Layout" unique_id=381586290]
-layout_mode = 2
-text = "Quit"
+text = "PLAY"
 
 [connection signal="pressed" from="Layout/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Layout/QuitButton" to="." method="_on_quit_button_pressed"]
