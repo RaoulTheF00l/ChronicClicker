@@ -6,6 +6,10 @@ var money: float = 0.00
 var dub_value: float = 20.00
 var sell_amount: float = 2.5
 
+var workers_hired: int = 1
+var hire_worker_amount: int = 1
+var hire_value: int = 10
+
 
 
 @onready var harvest_button: Button = $ButtonsLayout/HarvestButton
@@ -50,4 +54,8 @@ func _sell() -> void:
 
 func _on_sell_button_pressed() -> void:
 	_sell()
-	
+
+func _hire() -> void:
+	workers_hired += 1
+	harvest_amount += 0.5
+	_update_display()

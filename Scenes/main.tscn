@@ -86,3 +86,15 @@ offset_bottom = 41.0
 [node name="MoneyLabel" type="Label" parent="CurrencyLayout" unique_id=761253813]
 layout_mode = 2
 text = "Cash: $0"
+
+[node name="StoreLayout" type="BoxContainer" parent="." unique_id=710123018]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 306.0
+offset_right = 407.0
+offset_bottom = 346.0
+theme_override_constants/separation = 15
+
+[node name="HireButton" type="Button" parent="StoreLayout" unique_id=1023842269]
+layout_mode = 2
+text = "Hire x1 Worker"
