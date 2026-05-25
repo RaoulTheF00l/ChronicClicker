@@ -40,6 +40,9 @@ func _on_harvest_button_pressed() -> void:
 
 
 func _sell() -> void:
+	if product < sell_amount:
+		return
+
 	money += dub_value
 	product -= sell_amount
 	_update_display()
