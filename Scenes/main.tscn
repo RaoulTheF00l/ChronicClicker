@@ -93,7 +93,7 @@ text = "HARVEST"
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_8gbba")
-text = "SELL 10"
+text = "SELL DUB (2.5G)"
 
 [node name="CurrencyLayout" type="BoxContainer" parent="MobileLayout" unique_id=1260676179]
 layout_mode = 2
@@ -114,8 +114,14 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Hire x1 Worker"
 
-[node name="HireDealerButton" type="Button" parent="MobileLayout/StoreLayout" unique_id=1032069852]
+[node name="AssignFarmersButton" type="Button" parent="MobileLayout/StoreLayout" unique_id=1032069852]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Hire x1 Dealer
-"
+text = "Hire x1 farmer"
+
+[node name="ReincarnateLayout" type="VBoxContainer" parent="MobileLayout" unique_id=711108797]
+layout_mode = 2
+
+[node name="ReincarnateButton" type="Button" parent="MobileLayout/ReincarnateLayout" unique_id=690396658]
+layout_mode = 2
+text = "REINCARNATE"
