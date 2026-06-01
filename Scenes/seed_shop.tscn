@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://cevrw016n5ctv"]
+
+[ext_resource type="Script" uid="uid://dc4emmxckgybo" path="res://Scenes/seed_shop.gd" id="1_m5tar"]
+
+[node name="SeedShop" type="Control" unique_id=1725811390]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m5tar")
+
+[node name="BG" type="Panel" parent="." unique_id=1102517306]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLayout" type="VBoxContainer" parent="BG" unique_id=245894588]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.0
+offset_top = 30.0
+offset_right = 230.0
+offset_bottom = 76.0
+grow_horizontal = 2
+
+[node name="TileLabel" type="Label" parent="BG/TitleLayout" unique_id=679178208]
+layout_mode = 2
+text = "seed shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CategoryLayout" type="HBoxContainer" parent="BG/TitleLayout" unique_id=810644048]
+layout_mode = 2
+theme_override_constants/separation = 62
+
+[node name="RegsLabel" type="Label" parent="BG/TitleLayout/CategoryLayout" unique_id=1501135424]
+layout_mode = 2
+text = "Regs"
+
+[node name="MidsLabel" type="Label" parent="BG/TitleLayout/CategoryLayout" unique_id=390317160]
+layout_mode = 2
+text = "Mids"
+
+[node name="DankLabel" type="Label" parent="BG/TitleLayout/CategoryLayout" unique_id=199078424]
+layout_mode = 2
+text = "DANK"
+
+[node name="CosmicLabel" type="Label" parent="BG/TitleLayout/CategoryLayout" unique_id=1022095112]
+layout_mode = 2
+text = "???"
+
+[node name="CelestialLabel" type="Label" parent="BG/TitleLayout/CategoryLayout" unique_id=1949710713]
+layout_mode = 2
+text = "???"
+
+[node name="ShopLayout" type="VBoxContainer" parent="BG" unique_id=1147273985]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 196.0
+offset_right = 487.0
+offset_bottom = 262.0
+theme_override_constants/separation = 8
+
+[node name="SlotLayout" type="HBoxContainer" parent="BG/ShopLayout" unique_id=1308954846]
+layout_mode = 2
+theme_override_constants/separation = 72
+
+[node name="TitleLabel" type="Label" parent="BG/ShopLayout/SlotLayout" unique_id=1001576268]
+layout_mode = 2
+text = "Basic seed"
+
+[node name="CostLabel" type="Label" parent="BG/ShopLayout/SlotLayout" unique_id=1692790574]
+layout_mode = 2
+text = "$100"
+
+[node name="AmountLabel" type="Label" parent="BG/ShopLayout/SlotLayout" unique_id=1405416262]
+layout_mode = 2
+text = "0/99"
+
+[node name="SlotButton" type="Button" parent="BG/ShopLayout/SlotLayout" unique_id=1281410673]
+layout_mode = 2
+text = "buy"
+
+[node name="SlotLayout2" type="HBoxContainer" parent="BG/ShopLayout" unique_id=1323842047]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="TitleLabel" type="Label" parent="BG/ShopLayout/SlotLayout2" unique_id=1679406283]
+layout_mode = 2
+text = "Crappy soil"
+
+[node name="CostLabel" type="Label" parent="BG/ShopLayout/SlotLayout2" unique_id=265518939]
+layout_mode = 2
+text = "$20"
+
+[node name="AmountLabel" type="Label" parent="BG/ShopLayout/SlotLayout2" unique_id=187002591]
+layout_mode = 2
+text = "0/20"
+
+[node name="SlotButton2" type="Button" parent="BG/ShopLayout/SlotLayout2" unique_id=890653532]
+layout_mode = 2
+text = "buy"
+
+[connection signal="pressed" from="BG/ShopLayout/SlotLayout/SlotButton" to="." method="_on_slot_button_pressed"]
+[connection signal="pressed" from="BG/ShopLayout/SlotLayout2/SlotButton2" to="." method="_on_slot_button_2_pressed"]

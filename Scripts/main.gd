@@ -113,8 +113,9 @@ func _on_hire_button_pressed() -> void:
 
 func _on_assign_farmers_button_pressed() -> void:
 	# For now, this button does two things:
-	# 1. If you have no unassigned farmers, it tries to hire one.
-	# 2. If you have an unassigned farmer, it assigns one.
+	if farmers_assigned <= 0:
+		_hire_farmer()
+		
 
 	if farmers_hired <= farmers_assigned:
 		_hire_farmer()
